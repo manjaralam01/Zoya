@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPT-109 Assignment 1 — Complete Answers (All 8 Questions)</title>
+<style>
+:root{--accent:#2563eb;--bg:#f4f6fb;--card:#ffffff;--ink:#1e293b;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding:24px}
+.wrap{max-width:900px;margin:0 auto;background:var(--card);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:40px 48px}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase}
+h1{font-size:26px;margin:14px 0 4px}
+h2{font-size:19px;color:var(--accent);margin:26px 0 8px}
+p{margin:10px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#eff6ff;color:#1e3a8a}
+ul,ol{margin:10px 0 10px 22px}
+li{margin:6px 0}
+.q{font-size:16px;color:var(--muted);font-style:italic;border-left:4px solid var(--accent);padding:8px 14px;background:#f8fafc;border-radius:0 8px 8px 0;margin-bottom:18px}
+.key{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px 16px;margin:16px 0}
+.key b{color:#92400e}
+img{max-width:100%}
+
+nav.toc{background:#0f172a;border-radius:12px;padding:18px 22px;margin:20px 0}
+nav.toc a{color:#93c5fd;text-decoration:none;display:block;padding:6px 0;font-size:15px}
+nav.toc a:hover{color:#fff}
+section{border-top:3px solid var(--accent);margin-top:40px;padding-top:24px}
+
+/* ---- decoration ---- */
+:root{--accent2:#7c3aed;--navy:#0f172a}
+body{background:linear-gradient(180deg,#eef2ff 0%,#f4f6fb 100%)}
+.wrap{border-top:8px solid var(--accent);border-image:linear-gradient(90deg,#2563eb,#7c3aed,#ec4899) 1}
+.cover{background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);color:#fff;border-radius:16px;padding:44px 40px;margin:8px 0 22px;position:relative;overflow:hidden}
+.cover:before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.10)}
+.cover:after{content:"";position:absolute;right:60px;bottom:-80px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.08)}
+.cover .badge{background:#fff;color:#1e3a8a}
+.cover h1{color:#fff;font-size:34px;line-height:1.25;margin:18px 0 6px}
+.cover .sub{color:#dbeafe;font-size:16px;margin:0 0 26px}
+.cover .id{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
+.cover .id div{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px}
+.cover .id small{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#bfdbfe}
+.cover .id b{font-size:19px;color:#fff}
+nav.toc{background:linear-gradient(135deg,#0f172a,#1e293b);border-left:6px solid #7c3aed}
+nav.toc a{border-bottom:1px dashed #334155}
+section{border-top:none;position:relative}
+section>h1{background:linear-gradient(90deg,#eff6ff,#f5f3ff);border-left:8px solid var(--accent);border-radius:0 12px 12px 0;padding:12px 16px;font-size:23px}
+section>.badge{background:linear-gradient(90deg,#2563eb,#7c3aed)}
+h2{border-bottom:2px solid #dbeafe;padding-bottom:4px;display:block}
+h2:before{content:"\25C6";color:var(--accent2);margin-right:8px;font-size:14px}
+th{background:linear-gradient(90deg,#dbeafe,#ede9fe);color:#1e1b4b}
+tr:nth-child(even) td{background:#f8fafc}
+td:first-child{border-left:3px solid #93c5fd}
+.q{background:linear-gradient(90deg,#eff6ff,#fff);border-left-color:var(--accent2)}
+.key{background:linear-gradient(135deg,#fffbeb,#fef3c7);border-left:5px solid #f59e0b}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="cover">
+<span class="badge">BPT-109 · Assignment 1</span>
+<h1>Introduction to Computer<br>Complete Assignment Answers</h1>
+<p class="sub">Units 1 &amp; 2 &nbsp;·&nbsp; All 8 questions answered</p>
+<div class="id">
+<div><small>Name</small><b>Zoya</b></div>
+<div><small>Roll No</small><b>1826100</b></div>
+<div><small>Submission Date</small><b>13-Oct-2026</b></div>
+</div>
+</div>
+<nav class="toc">
+<b style="color:#fff">Table of Contents</b>
+<a href="#q1">Q1 · Computer Characteristics &amp; Five Generations (Remembering)</a>
+<a href="#q2">Q2 · Data, Instruction &amp; Control Flow in a Computer (Understanding)</a>
+<a href="#q3">Q3 · Scanners &amp; Card Readers on a Campus (Applying)</a>
+<a href="#q4">Q4 · Low-Level vs High-Level Languages (Analyzing)</a>
+<a href="#q5">Q5 · Mouse/Trackball vs Digitizers/Tablets (Analyzing)</a>
+<a href="#q6">Q6 · Plotter vs UHD Monitor + Large-Format Printer (Evaluating)</a>
+<a href="#q7">Q7 · Facial vs Voice Biometrics in Noisy Public Areas (Evaluating)</a>
+<a href="#q8">Q8 · Accessible Hands-Free Workstation Design (Creating)</a>
+</nav>
+<section id="q1">
+<span class="badge">Remembering · Unit 1</span>
+<h1>Question 1 — Characteristics of a Modern Computer & Generations</h1>
+<div class="q">List four primary characteristics of a modern digital computer and identify the key hardware technology associated with each of the five generations of computers.</div>
+
+<h2>Part A: Four Primary Characteristics of a Modern Digital Computer</h2>
+<table>
+<tr><th>Characteristic</th><th>Description</th><th>Typical Example</th></tr>
+<tr><td><b>1. Speed</b></td><td>Performs millions to billions of instructions per second. Modern processors execute in nanoseconds/picoseconds, measured in MIPS, GFLOPS or TOPS.</td><td>3–6 GHz CPU executing billions of cycles/second</td></tr>
+<tr><td><b>2. Accuracy</b></td><td>Performs every computation with 100% accuracy for the same input; errors occur only due to human mistakes or faulty input data, not from machine "tiredness".</td><td>Financial calculation to many decimal places without drift</td></tr>
+<tr><td><b>3. Storage (Memory Capacity)</b></td><td>Stores huge amounts of data permanently or temporarily — from MB of cache to terabytes of disk/cloud storage — and retrieves it instantly.</td><td>RAM 8–32 GB, SSD 512 GB – 4 TB</td></tr>
+<tr><td><b>4. Versatility & Automation (Diligence)</b></td><td>Can perform many different tasks (documents, video, calculation, communication) with the same hardware, and can work continuously for hours without fatigue, boredom or loss of concentration.</td><td>One laptop used for coding, editing, browsing, and calls</td></tr>
+</table>
+<div class="key"><b>Note:</b> Reliability and consistency are closely tied to diligence — a computer never "has a bad day", unlike a human operator.</div>
+<h2>Part B: Key Hardware Technology of the Five Generations</h2>
+<table>
+<tr><th>Generation</th><th>Period</th><th>Key Hardware Technology</th><th>Representative Machines</th></tr>
+<tr><td><b>1st Generation</b></td><td>1940–1956</td><td><b>Vacuum tubes</b> for logic and memory; punched cards & paper tape for I/O; magnetic drums for storage</td><td>ENIAC, UNIVAC I, EDVAC</td></tr>
+<tr><td><b>2nd Generation</b></td><td>1956–1963</td><td><b>Transistors</b>; magnetic core memory; magnetic tape & disk storage; high-level languages appear</td><td>IBM 1401, CDC 1604</td></tr>
+<tr><td><b>3rd Generation</b></td><td>1964–1971</td><td><b>Integrated Circuits (ICs / SSI–MSI)</b> on silicon chips; semiconductor RAM; keyboards & monitors for I/O</td><td>IBM System/360, PDP-8</td></tr>
+<tr><td><b>4th Generation</b></td><td>1971–Present</td><td><b>Microprocessors — LSI/VLSI on a single chip</b>; semiconductor memory (DRAM); hard disks, optical discs, GUIs with mouse</td><td>Intel 4004/8086, IBM PC (1981)</td></tr>
+<tr><td><b>5th Generation</b></td><td>Present &amp; Beyond</td><td><b>ULSI chips, multi-core/parallel processors, AI accelerators (GPU/TPU/NPU), quantum computing elements</b>; natural input (voice, vision)</td><td>Modern smartphones, supercomputers, quantum prototypes</td></tr>
+</table>
+<div class="key"><b>Summary:</b> The hardware journey is Vacuum Tubes → Transistors → ICs → Microprocessors (VLSI) → AI/Quantum & ULSI, with each generation bringing smaller size, lower cost, higher speed and greater reliability.</div>
+
+</section>
+<section id="q2">
+<span class="badge">Understanding · Unit 1</span>
+<h1>Question 2 — Data, Instruction & Control Signal Flow in a Computer</h1>
+<div class="q">Explain the flow of data, instructions, and control signals within the functional block diagram of a computer, detailing the interaction between the CPU, memory unit, and I/O interface.</div>
+
+<h2>Overview of the Functional Block Diagram</h2>
+<p>The classical computer consists of five interconnected units: <b>Input Unit, Memory Unit, Arithmetic Logic Unit (ALU), Control Unit (CU)</b>, and <b>Output Unit</b>. The CU and ALU together form the <b>CPU</b>. All units communicate through three system <b>buses</b>: the <b>data bus</b> (carries data), the <b>address bus</b> (carries memory/I/O locations) and the <b>control bus</b> (carries command signals like READ, WRITE, I/O).</p>
+<pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:10px;overflow-x:auto;font-size:13px">
+        ┌────────────── CONTROL BUS ──────────────┐
+        │                                         │
+  [INPUT]──►[ MEMORY (RAM + Cache) ]◄──►[ CPU: ALU  ]
+   Device        ▲      ▲                  [      CU ]
+        │        │      │                     │   ▲
+        │   DATA BUS    │                     └───┘
+        │        │      │                        │
+  [OUTPUT]◄──────────────────────────  data / control
+   Device
+</pre>
+<h2>Flow of Data, Instructions and Control Signals</h2>
+<ol>
+<li><b>Input stage:</b> The input device converts user actions into electronic data and sends it to the <b>memory unit</b> through the data bus, under the direction of control signals from the CU.</li>
+<li><b>Fetch:</b> The <b>Control Unit</b> places the address of the next instruction on the address bus and issues a <b>READ</b> control signal. The instruction travels from memory to the CPU via the data bus (stored temporarily in the <b>Instruction Register</b>).</li>
+<li><b>Decode:</b> The CU decodes the instruction and generates the sequence of <b>control signals</b> that will route the data to the correct unit.</li>
+<li><b>Execute:</b> If the operation is arithmetic/logic, data moves from memory/registers into the <b>ALU</b>, which computes the result. Control signals synchronize when operands are loaded and when the result is written back.</li>
+<li><b>Write-back:</b> The result returns to a register or to a memory address (WRITE signal on the control bus).</li>
+<li><b>Output stage:</b> When an output instruction executes, the CU signals the <b>I/O interface</b>; data is read from memory and sent through the output device (monitor, printer), which converts it to human-perceivable form (text, image, sound).</li>
+</ol>
+<h2>Interaction Between the Three Main Units</h2>
+<table>
+<tr><th>Interaction</th><th>What Happens</th></tr>
+<tr><td><b>CPU ↔ Memory</b></td><td>Continuous traffic: instructions and operands are fetched (READ), results are stored (WRITE). Cache memory sits between them to reduce access time.</td></tr>
+<tr><td><b>CPU ↔ I/O Interface</b></td><td>The CU never talks to devices directly; it commands the <b>I/O interface/controller</b>, which handles timing, buffering and handshaking with the slower device (e.g., DMA transfers data memory↔device without CPU involvement).</td></tr>
+<tr><td><b>Memory ↔ I/O</b></td><td>Data may pass through memory (Programmed I/O) or bypass the CPU entirely (Interrupts and DMA) for efficient transfers.</td></tr>
+</table>
+<div class="key"><b>Key idea:</b> The <b>Control Unit is the coordinator</b> — it generates all control signals that decide <i>which</i> unit acts, <i>when</i>, and <i>in which direction</i> data flows, while the data bus physically carries the information between CPU, memory and I/O.</div>
+
+</section>
+<section id="q3">
+<span class="badge">Applying · Unit 2</span>
+<h1>Question 3 — Deploying Scanners & Card Readers on a Campus</h1>
+<div class="q">Demonstrate how optical data scanning devices (e.g., barcode/OMR scanners) and electronic card readers (e.g., RFID/smart card readers) can be deployed in a campus environment to automate student attendance and library checkouts.</div>
+
+<h2>Scenario: Automating a Campus</h2>
+<p>A university wants (a) automatic <b>student attendance</b> in every lecture hall and (b) self-service <b>library checkouts</b>. Optical scanning and electronic card readers solve both without manual registers.</p>
+<h2>Part A — Student Attendance Using Optical Scanning Devices</h2>
+<table>
+<tr><th>Device</th><th>How It Is Deployed</th><th>Workflow</th></tr>
+<tr><td><b>Barcode scanner</b></td><td>Each student ID card has a printed barcode/QR code; a fixed scanner or smartphone camera is placed at the classroom entrance.</td><td>Student scans card at door → scanner reads code → software matches roll number → timestamp recorded in the attendance database → report generated for faculty.</td></tr>
+<tr><td><b>OMR scanner</b></td><td>For exam attendance or quick bulk marking, pre-printed OMR bubble sheets are scanned at high speed.</td><td>Bubble marked next to each ID → OMR reader detects pencil marks → marks converted to digital records → verified against the registered student list.</td></tr>
+</table>
+<p><b>Advantages:</b> no queues, no proxy handwriting, instant digital reports, and integration with the LMS/ERP to alert parents automatically.</p>
+<h2>Part B — Library Checkouts Using Electronic Card Readers</h2>
+<table>
+<tr><th>Device</th><th>How It Is Deployed</th><th>Workflow</th></tr>
+<tr><td><b>RFID reader + RFID tags</b></td><td>An RFID tag is pasted inside each book; RFID antennas are built into the self-checkout kiosk and the exit gates; the student card also carries an RFID chip.</td><td>Student taps ID card → identity verified → books placed on the kiosk → all tags read simultaneously in seconds → due date auto-printed/sent by SMS → exit gate confirms books are properly issued, otherwise an alarm sounds.</td></tr>
+<tr><td><b>Smart card reader</b></td><td>Contact-based smart card reader (chip card) at the circulation desk authenticates the student.</td><td>Card inserted → chip verified against library database → book barcode scanned → transaction stored on the card's chip and central server → fine/balance updated.</td></tr>
+</table>
+<h2>End-to-End Demonstration (Single Visit)</h2>
+<ol>
+<li>Student enters class, scans barcode ID at the door — attendance marked in the central server.</li>
+<li>After class, at the library, the student taps the same RFID smart card on the kiosk.</li>
+<li>Three books are placed on the reader; RFID reads all tags at once and issues them against the student record.</li>
+<li>The LMS updates attendance, and the library system sends a return-due notification.</li>
+</ol>
+<div class="key"><b>Result:</b> Attendance and circulation data are captured automatically, accurately and in real time — eliminating manual registers, reducing queues, and enabling instant analytics for administrators.</div>
+
+</section>
+<section id="q4">
+<span class="badge">Analyzing · Unit 1</span>
+<h1>Question 4 — Low-Level vs High-Level Languages: A Comparison</h1>
+<div class="q">Distinguish between low-level languages (Machine and Assembly) and high-level languages in terms of execution speed, hardware dependence, translation requirements, and programming complexity.</div>
+
+<h2>Definitions</h2>
+<ul>
+<li><b>Machine Language (1GL):</b> Binary 0s and 1s understood directly by the processor.</li>
+<li><b>Assembly Language (2GL):</b> Human-readable mnemonics (MOV, ADD, JMP) mapped one-to-one to machine instructions; converted by an assembler.</li>
+<li><b>High-Level Languages (3GL+, e.g., C, Java, Python):</b> English-like statements independent of any specific processor; converted by compilers/interpreters.</li>
+</ul>
+<h2>Comparative Breakdown</h2>
+<table>
+<tr><th>Criteria</th><th>Low-Level (Machine / Assembly)</th><th>High-Level</th></tr>
+<tr><td><b>Execution speed</b></td><td><b>Fastest.</b> Machine code runs directly with zero translation; assembly is nearly as fast after assembling. Ideal for speed-critical firmware and drivers.</td><td>Generally slower due to translation overhead (compilation/JIT) and abstraction layers, though modern optimizers make the gap small for most applications.</td></tr>
+<tr><td><b>Hardware dependence</b></td><td><b>Completely hardware-specific.</b> Machine code differs per CPU family (x86 vs ARM vs MIPS); assembly is tied to the instruction set of one processor.</td><td><b>Hardware-independent (portable).</b> The same source code compiles for many architectures ("write once, run anywhere" in principle).</td></tr>
+<tr><td><b>Translation requirement</b></td><td>Machine language needs <b>none</b> — CPU executes it directly. Assembly needs an <b>assembler</b> to convert mnemonics into machine code.</td><td>Needs a <b>compiler</b> (whole program → machine code) or an <b>interpreter</b> (line-by-line execution, e.g., Python) — a mandatory extra step before or during execution.</td></tr>
+<tr><td><b>Programming complexity</b></td><td><b>Very complex & error-prone.</b> Programmer must manage registers, memory addresses, CPU flags and instructions manually; hundreds of lines for simple tasks; hard to debug and maintain.</td><td><b>Easy & human-readable.</b> English-like syntax, rich built-in libraries, automatic memory management (in many languages) — one line can do what takes a page of assembly.</td></tr>
+<tr><td><b>Memory control & size</b></td><td>Minimal memory footprint and exact control over every byte/cycle.</td><td>Higher runtime overhead; programmer has less direct control (except in C/C++).</td></tr>
+<tr><td><b>Typical uses</b></td><td>BIOS/firmware, device drivers, embedded systems, real-time kernels, reverse engineering.</td><td>Applications, web, mobile apps, data science, business software.</td></tr>
+</table>
+<h2>Analytical Conclusion</h2>
+<p>Low-level languages trade human productivity for <b>maximum speed, minimal footprint, and total hardware control</b>; high-level languages trade some performance for <b>portability, rapid development, and maintainability</b>. In practice, modern software is layered: high-level code for business logic with small low-level components where performance is critical.</p>
+
+</section>
+<section id="q5">
+<span class="badge">Analyzing · Unit 2</span>
+<h1>Question 5 — Point-and-Draw Devices vs Graphics Digitizers</h1>
+<div class="q">Compare point-and-draw devices (such as a mouse and trackball) with graphics digitizers/drawing tablets, highlighting how their coordinate tracking mechanisms and pressure sensitivity differ for CAD and digital art applications.</div>
+
+<h2>Point-and-Draw Devices (Mouse & Trackball)</h2>
+<table>
+<tr><th>Aspect</th><th>Mechanism</th></tr>
+<tr><td><b>Coordinate tracking</b></td><td>Relative positioning: an optical sensor or ball measures <i>movement displacement</i> (delta-X, delta-Y) from the current point; the cursor moves wherever you stop. No fixed mapping to a physical location.</td></tr>
+<tr><td><b>Pressure sensitivity</b></td><td><b>None.</b> Clicks are simple binary on/off events; the device cannot sense how hard the user presses, so line weight cannot be controlled naturally.</td></tr>
+<tr><td><b>Best suited for</b></td><td>General GUI navigation, selection, simple drawing. Trackball gives the same control without wrist movement (good for tight spaces or limited desks).</td></tr>
+</table>
+<h2>Graphics Digitizers / Drawing Tablets</h2>
+<table>
+<tr><th>Aspect</th><th>Mechanism</th></tr>
+<tr><td><b>Coordinate tracking</b></td><td><b>Absolute positioning:</b> the tablet surface is a fixed coordinate grid (e.g., 2540 LPI resolution). The pen/stylus position on the tablet maps 1:1 to the exact screen pixel — the bottom-left of the tablet is always the bottom-left of the canvas. Buttons/ExpressKeys add shortcuts.</td></tr>
+<tr><td><b>Pressure sensitivity</b></td><td><b>Multi-level pressure sensing</b> (typically 2048–8192 pressure levels) plus <b>tilt detection</b>. Pressing harder draws a thicker/darker stroke — mimicking a real pencil, brush or technical pen. Some pens also detect barrel rotation.</td></tr>
+<tr><td><b>Best suited for</b></td><td>CAD drafting, digital painting, retouching, signatures, and animation, where precision strokes matter.</td></tr>
+</table>
+<h2>Side-by-Side Comparison</h2>
+<table>
+<tr><th>Criteria</th><th>Mouse / Trackball</th><th>Digitizer / Drawing Tablet</th></tr>
+<tr><td>Positioning</td><td>Relative (movement-based)</td><td>Absolute (fixed grid mapping)</td></tr>
+<tr><td>Accuracy</td><td>Moderate; hand-eye coordination on a separate screen causes drift</td><td>Very high; direct pen-on-surface control eliminates parallax</td></tr>
+<tr><td>Pressure levels</td><td>0 (click only)</td><td>2048–8192 levels + tilt</td></tr>
+<tr><td>Ergonomics for art</td><td>Awkward wrist claw; repetitive lifting</td><td>Natural pen grip; wrist rests on surface</td></tr>
+<tr><td>CAD suitability</td><td>Basic pan/zoom, menu work</td><td>Precision sketching, spline control, dimensions</td></tr>
+</table>
+<div class="key"><b>Conclusion:</b> For <b>CAD and digital art</b>, the digitizer wins because absolute coordinates give repeatable, millimetre-accurate input and pressure/tilt sensitivity enables natural line variation — something a mouse mathematically cannot provide. The mouse/trackball remains the better general-purpose navigator.</div>
+
+</section>
+<section id="q6">
+<span class="badge">Evaluating · Unit 2</span>
+<h1>Question 6 — Plotter vs Monitor + Large-Format Printer for Blueprints</h1>
+<div class="q">Assess whether a drum/flatbed plotter or an ultra-high-definition monitor and large-format printer combination is superior for producing civil engineering blueprints, justifying your selection based on line resolution, scalability, and long-term production costs.</div>
+
+<h2>Requirement Analysis: Civil Engineering Blueprints</h2>
+<ul>
+<li>Very large sheets (A0/A1, sometimes 36&times;48 inch) with dense linework, hatching, dimensions and annotations.</li>
+<li>Line resolution and pen accuracy are critical — thin walls, centre lines and fine text must remain crisp at full scale.</li>
+<li>Long production runs over years, with occasional reprints and revisions.</li>
+</ul>
+<h2>Option A: Drum / Flatbed Plotter</h2>
+<table>
+<tr><th>Factor</th><th>Assessment</th></tr>
+<tr><td><b>Line resolution</b></td><td>Excellent. Pen plotters draw true vector lines directly with a physical pen — no pixelation, infinitely smooth curves, and multiple pen widths/colours can be swapped automatically.</td></tr>
+<tr><td><b>Scalability</b></td><td>Drum plotters handle very long sheets ( metres long) continuously; flatbed plotters handle large fixed sheets with extreme registration accuracy. Both excel at full-scale construction drawings.</td></tr>
+<tr><td><b>Long-term cost</b></td><td>Low running cost: only pens and paper. Machine is robust, lasts 10+ years, no ink cartridges or printheads to dry out. But it is <b>slow</b> and single-purpose — low productivity.</td></tr>
+<tr><td><b>Weaknesses</b></td><td>No fill-area shading (hatching is slow), no photographic output, pens wear and must be monitored, slow output (one A0 sheet can take 20–40 minutes).</td></tr>
+</table>
+<h2>Option B: UHD Monitor + Large-Format Printer</h2>
+<table>
+<tr><th>Factor</th><th>Assessment</th></tr>
+<tr><td><b>Line resolution</b></td><td>Very high on paper (large-format inkjets print 2400×1200 dpi), but lines are rasterized pixels — under a loupe, curves show tiny stair-steps. On the UHD 4K/8K monitor (on-screen), review is excellent for soft proofs.</td></tr>
+<tr><td><b>Scalability</b></td><td>Excellent: prints any size up to the printer's width, supports colour renders, photos, maps and 3D shaded views for presentations — a complete documentation workstation.</td></tr>
+<tr><td><b>Long-term cost</b></td><td>Higher consumable cost: ink cartridges (some large-format inks cost more than the pens plotters use), printheads, coated paper rolls, and periodic maintenance. Faster output raises productivity, offsetting cost per sheet.</td></tr>
+<tr><td><b>Weaknesses</b></td><td>Consumables expire; clogged nozzles in low-usage periods; ink and media costs accumulate over thousands of sheets.</td></tr>
+</table>
+<h2>Head-to-Head Verdict</h2>
+<table>
+<tr><th>Criteria</th><th>Plotter</th><th>Monitor + Large-Format Printer</th></tr>
+<tr><td>Line resolution</td><td>★★★★★ true vector lines</td><td>★★★★ high but rasterized</td></tr>
+<tr><td>Scalability / media flexibility</td><td>★★★ large sheets only, pen-only output</td><td>★★★★★ any content incl. colour/photo</td></tr>
+<tr><td>Long-term production cost</td><td>★★★★★ cheap consumables</td><td>★★★ ongoing ink/media costs</td></tr>
+<tr><td>Speed / productivity</td><td>★★ slow</td><td>★★★★★ fast, plus digital review on UHD monitor</td></tr>
+</table>
+<div class="key"><b>Justified Selection — UHD Monitor + Large-Format Printer combination is superior for a modern civil engineering firm.</b> Justification: (1) modern blueprints include GIS maps, colour renders and photographs that a pen plotter simply cannot produce; (2) the UHD monitor eliminates the cost and delay of physical proofs through digital review/approval; (3) inkjet line quality at 2400 dpi far exceeds drafting standards for readability; and (4) higher throughput pays back the consumable premium within high-volume offices. The plotter remains the niche choice only where a very low-volume site office needs decades of cheap, true-vector archival sheets without colour.</div>
+
+</section>
+<section id="q7">
+<span class="badge">Evaluating · Unit 2</span>
+<h1>Question 7 — Facial vs Voice Biometrics in Noisy Public Environments</h1>
+<div class="q">Critique the operational reliability and security vulnerabilities of vision-input devices (facial recognition) compared to voice recognition devices when deployed as primary biometric authentication tools in high-ambient-noise, publicly exposed environments.</div>
+
+<h2>Deployment Context</h2>
+<p>The deployment is <b>outdoors or in open public spaces with high ambient noise</b> — e.g., factory gates, metro stations, stadium entrances. Authentication must work fast, reliably, and resist spoofing by attackers who can observe users publicly.</p>
+<h2>Vision-Input (Facial Recognition) — Reliability Critique</h2>
+<table>
+<tr><th>Issue</th><th>Impact in This Environment</th></tr>
+<tr><td><b>Lighting variance</b></td><td>Direct sun, backlight, night-time or shadows change the face image drastically → high false-reject rate; users may be denied entry repeatedly.</td></tr>
+<tr><td><b>Physical occlusion</b></td><td>Masks, helmets, caps, sunglasses, scarves (common outdoors) hide facial features → recognition fails or degrades.</td></tr>
+<tr><td><b>Angle & distance</b></td><td>Users walk past at varying heights and angles; cameras must capture a near-frontal face, causing queues at entry lanes.</td></tr>
+<tr><td><b>Weather</b></td><td>Rain, fog, dust on the lens reduce image quality → intermittent failures needing manual fallback.</td></tr>
+</table>
+<h2>Vision-Input — Security Vulnerabilities</h2>
+<ul>
+<li><b>Presentation attacks:</b> printed photos, phone-screen replays, or cheap 3D masks can fool basic cameras (mitigated by liveness/IR detection, but cheap deployments skip it).</li>
+<li><b>Non-consensual capture:</b> in public, anyone's face can be enrolled or tracked without consent → privacy violations and surveillance misuse.</li>
+<li><b>Data breach severity:</b> unlike passwords, faces <b>cannot be changed</b> if the biometric database leaks — permanent identity compromise.</li>
+<li><b>Remote attack surface:</b> cameras connected to networks can be spoofed, jammed, or have video feeds intercepted.</li>
+</ul>
+<h2>Voice Recognition — Reliability Critique</h2>
+<table>
+<tr><th>Issue</th><th>Impact in High-Noise Public Areas</th></tr>
+<tr><td><b>Ambient noise</b></td><td>Traffic, crowds, machinery mask speech → the <b>single biggest weakness</b>; far-field microphones and noise cancellation help but cannot fully eliminate overlap when two people speak simultaneously.</td></tr>
+<tr><td><b>Health & environment</b></td><td>Colds, hoarseness, wind across the mic, or shouting to be heard change voice characteristics → false rejects.</td></tr>
+<tr><td><b>Replay vulnerability</b></td><td>Voices are easily recorded in public (the user speaks aloud!). Attackers can replay recordings or use voice-cloning AI to synthesize the victim's speech.</td></tr>
+<tr><td><b>Privacy leakage</b></td><td>Speaking a passphrase in public reveals credentials to bystanders; the passphrase itself may be overheard and reused (voice is not secret).</td></tr>
+</table>
+<h2>Comparative Verdict</h2>
+<table>
+<tr><th>Criteria</th><th>Facial Recognition</th><th>Voice Recognition</th></tr>
+<tr><td>Reliability in high ambient noise</td><td>✔ Noise <i>does not affect cameras</i> — only visual conditions matter</td><td>✘ Severely degraded — its core input is corrupted</td></tr>
+<tr><td>Reliability vs. weather/lighting</td><td>✘ Degraded by sun, night, rain, occlusion</td><td>✔ Unaffected by lighting/weather (except wind)</td></tr>
+<tr><td>Security (spoofing resistance)</td><td>Moderate — needs liveness detection; face can't be changed after breach</td><td>Weak — public speech is recordable and cloneable; passphrase not secret</td></tr>
+<tr><td>Privacy in public</td><td>Weak — covert enrollment possible</td><td>Weak — credentials spoken aloud</td></tr>
+<tr><td>Convenience/speed</td><td>Fast, contactless, hands-free</td><td>Requires speaking a phrase each time; awkward in crowds</td></tr>
+</table>
+<div class="key"><b>Critique & Recommendation:</b> In a <b>high-ambient-noise, publicly exposed</b> environment, <b>neither modality should be the sole authenticator</b>. Voice fails fundamentally on reliability (noise destroys its input) and security (public speech is clonable). Facial recognition is operationally more robust to noise but fails on lighting/weather and carries the severe, irreversible breach risk of a face database. The defensible design is <b>multi-factor</b>: facial recognition with IR liveness + on-device processing + a PIN/badge as backup, rather than voice as the primary factor. Voice should be demoted to an accessibility aid, never the primary gatekeeper in this setting.</div>
+
+</section>
+<section id="q8">
+<span class="badge">Creating · Unit 2</span>
+<h1>Question 8 — Accessible Hands-Free Workstation for a Visually Impaired User</h1>
+<div class="q">Design an accessible, hands-free computer workstation tailored for a visually impaired user. Propose a coherent integration of non-visual input devices (such as voice recognition systems and tactile keyboards) with specialized output devices (such as voice response synthesizers and screen readers).</div>
+
+<h2>User Profile & Design Goals</h2>
+<ul>
+<li><b>User:</b> A visually impaired professional who needs a full computer workstation (documents, email, web, coding).</li>
+<li><b>Goals:</b> 100% hands-free capable where needed, fully keyboard-navigable, speech output for everything, tactile feedback, and ergonomic comfort for long sessions.</li>
+</ul>
+<h2>Proposed Integrated Workstation</h2>
+<table>
+<tr><th>Layer</th><th>Component</th><th>Role in the System</th></tr>
+<tr><td rowspan="3"><b>Non-Visual Input</b></td><td><b>Continuous voice recognition system</b> (high-accuracy, noise-cancelling microphone + command grammar)</td><td>Hands-free dictation of text, voice commands for navigation ("open mail", "scroll down"), and voice macros for complex tasks.</td></tr>
+<tr><td><b>Tactile/ergonomic keyboard</b> (with raised home-row markers, large-print high-contrast or Braille keycaps)</td><td>Fast, precise typing with touch-typing; tactile landmarks remove the need to look at keys.</td></tr>
+<tr><td><b>Refreshable Braille display</b> (40-cell, with Braille input keys) + optional tactile tablet for diagrams</td><td>Silent reading/editing of text and code; Braille input keys allow note-taking without speech.</td></tr>
+<tr><td rowspan="3"><b>Specialized Output</b></td><td><b>Screen reader software</b> (e.g., NVDA/JAWS/VoiceOver)</td><td>The core bridge: converts all screen content (text, buttons, dialogs) into speech and drives Braille output; provides full keyboard navigation.</td></tr>
+<tr><td><b>Voice response synthesizer / TTS engine</b> (natural neural voices, speed control)</td><td>Reads documents, email and interface feedback aloud; adjustable rate lets the user skim or study.</td></tr>
+<tr><td><b>Multi-speaker spatial audio + bone-conduction headset</b></td><td>Clear speech even in a shared office; bone conduction keeps ears free for ambient awareness.</td></tr>
+<tr><td><b>Assistive Layer</b></td><td><b>Smart assistant + smart-plug hub</b></td><td>Voice control of lighting, monitor standby, and room devices — extending accessibility beyond the PC itself.</td></tr>
+</table>
+<h2>How the Components Work Together (Coherent Integration)</h2>
+<ol>
+<li><b>Boot & login:</b> Screen reader announces the login screen; user types a PIN on the tactile keyboard (or speaks it via voice) — hands-free or hands-on, user's choice.</li>
+<li><b>Composition:</b> User dictates an email via voice recognition; TTS reads it back for proofing; corrections are made by voice ("replace 'weak' with 'week'") or by arrow keys with Braille display feedback.</li>
+<li><b>Reading & research:</b> Documents are navigated by headings using the screen reader; long passages are skimmed on the Braille display silently, then discussed aloud via TTS.</li>
+<li><b>Coding/debugging:</b> Editor shortcuts on the tactile keyboard; line-by-line feedback on the Braille display; voice commands run builds and read compiler errors aloud.</li>
+<li><b>Context switch:</b> A voice macro ("start meeting mode") mutes notifications, opens the video client, and announces controls as focus moves.</li>
+</ol>
+<h2>Accessibility & Ergonomic Considerations</h2>
+<ul>
+<li>All functions reachable by <b>keyboard alone</b>; voice is an accelerator, never a hard dependency (voice fails in noise/throat illness).</li>
+<li>Redundant feedback channels (speech + Braille) prevent single-point failure of any one device.</li>
+<li>Ergonomic split keyboard and microphone boom reduce strain during all-day use.</li>
+<li>On-device processing for speech to protect privacy of dictated content.</li>
+</ul>
+<div class="key"><b>Design Summary:</b> A screen reader acts as the central nervous system, uniting tactile input (Braille display + tactile keyboard) with speech output (TTS/voice response) and hands-free voice control — producing a workstation that is fast, private, redundant, and fully usable without vision.</div>
+
+</section>
+</div></body></html>
